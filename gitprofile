@@ -9,6 +9,10 @@ gush() {
   echo git push origin `__git_ps1 "%s"`
   git push origin `__git_ps1 "%s"`
 }
+fush() {
+  echo git push -f origin `__git_ps1 "%s"`
+  git push -f origin `__git_ps1 "%s"`
+}
 gups() {
   echo git push upstream `__git_ps1 "%s"`
   git push upstream `__git_ps1 "%s"`
