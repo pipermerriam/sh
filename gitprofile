@@ -13,6 +13,13 @@ fush() {
   echo git push -f origin `__git_ps1 "%s"`
   git push -f origin `__git_ps1 "%s"`
 }
+smush() {
+  git add -p
+  echo git commit --amend -C HEAD
+  git commit --amend -C HEAD
+  echo git push -f origin `__git_ps1 "%s"`
+  git push -f origin `__git_ps1 "%s"`
+}
 gups() {
   echo git push upstream `__git_ps1 "%s"`
   git push upstream `__git_ps1 "%s"`
